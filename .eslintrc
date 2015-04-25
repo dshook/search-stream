@@ -5,6 +5,7 @@
     "no-multi-spaces": false,
     "no-console": false,
     "no-underscore-dangle": false,
+    "handle-callback-err": false,
     "curly": [2, "multi-line"],
     "quotes": "single",
   },

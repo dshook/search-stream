@@ -1,7 +1,7 @@
 var searchStream = require('../');
 var test = require('tape');
-var arrayToStream = require('stream-array')
-var streamToArray = require('stream-to-array')
+var arrayToStream = require('stream-array');
+var streamToArray = require('stream-to-array');
 var movies = require('./movie-data.js');
 var messages = require('./message-data.js');
 
