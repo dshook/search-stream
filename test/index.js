@@ -75,3 +75,19 @@ test('Stream nested object', function(t){
     t.equal(arr.length, 1, 'One young buck');
   });
 });
+
+test('Regular Expression', function(t){
+  t.plan(2);
+
+  var search = searchStream();
+  var dataStream = arrayToStream(movies);
+
+  var destStream = dataStream.pipe(
+    search(/(.+,){5}/g)
+  );
+
+  streamToArray(destStream, function(err, arr){
+    t.ok(Array.isArray(arr), 'Result Stream is Array');
+    t.equal(arr.length, 3, 'Regex found 3 matches');
+  });
+});
