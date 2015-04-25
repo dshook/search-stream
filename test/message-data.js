@@ -1,4 +1,4 @@
-[
+module.exports = [
   {
     "_id": "553aa1852c73f6cf0e36dff5",
     "index": 0,
