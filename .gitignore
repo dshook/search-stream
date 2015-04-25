@@ -1,0 +1,14 @@
+# output
+public/dist
+
+# deps
+public/bower_components
+node_modules
+!app/node_modules
+
+# local config
+.env
+
+dist/*
+
+npm-debug.log
