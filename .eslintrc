@@ -6,6 +6,7 @@
     "no-console": false,
     "no-underscore-dangle": false,
     "handle-callback-err": false,
+    "no-use-before-define": false,
     "curly": [2, "multi-line"],
     "quotes": "single",
   },

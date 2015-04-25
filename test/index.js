@@ -61,3 +61,17 @@ test('Stream', function(t){
     t.equal(arr.length, 2, 'Two results for female');
   });
 });
+
+test('Stream nested object', function(t){
+  t.plan(2);
+
+  var search = searchStream({caseSensitive: true});
+  var dataStream = arrayToStream(messages);
+
+  var destStream = dataStream.pipe(search('Buck'));
+
+  streamToArray(destStream, function(err, arr){
+    t.ok(Array.isArray(arr), 'Result Stream is Array');
+    t.equal(arr.length, 1, 'One young buck');
+  });
+});
