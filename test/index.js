@@ -93,7 +93,7 @@ test('Regular Expression', function(t){
 });
 
 test('Search Columns', function(t){
-  t.plan(2);
+  t.plan(3);
 
   var search = searchStream({searchKeys: ['eyeColor']});
   var brownEyes = search('brown', messages);
@@ -104,5 +104,9 @@ test('Search Columns', function(t){
   var antonias = nameSearch('Antonia', messages);
 
   t.equal(antonias.length, 2, 'Expected 2 Named Antonia');
+
+  var nameAndTagSearch = searchStream({searchKeys: ['name', 'tags']});
+  var allAntonias = nameAndTagSearch('Antonia', messages);
+  t.equal(allAntonias.length, 3, 'Expected 3 matches for name and tag');
 
 });
