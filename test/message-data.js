@@ -13,7 +13,7 @@ module.exports = [
     "company": "REPETWIRE",
     "email": "antoniavega@repetwire.com",
     "phone": "+1 (964) 463-2717",
-    "address": "381 Seaview Court, Faywood, Louisiana, 9977",
+    "address": "381 Seaview brown Court, Faywood, Louisiana, 9977",
     "about": "Occaecat magna aute est fugiat dolor voluptate ea sint proident Lorem et deserunt nulla irure. Eu occaecat magna irure fugiat consequat. Anim nostrud aliqua nisi esse sint laboris Lorem amet officia minim. Fugiat nulla consequat voluptate occaecat commodo in elit. Ut fugiat ipsum esse sunt do voluptate officia et nostrud. Veniam cillum consequat adipisicing commodo officia. Tempor ex fugiat ex do enim et ad reprehenderit consequat dolor ad reprehenderit dolor.\r\n",
     "registered": "2014-06-10T22:07:45 +04:00",
     "latitude": -31.613338,
@@ -30,7 +30,7 @@ module.exports = [
     "friends": [
       {
         "id": 0,
-        "name": "Alison Preston"
+        "name": "Alison Brown Preston"
       },
       {
         "id": 1,
@@ -129,7 +129,11 @@ module.exports = [
       {
         "id": 2,
         "name": "Marisol Gardner"
-      }
+      },
+      {
+        "id": 3,
+        "name": "Antonia Gardner"
+      },
     ],
     "greeting": "Hello, Gilbert Daniels! You have 8 unread messages.",
     "favoriteFruit": "apple"
@@ -160,7 +164,8 @@ module.exports = [
       "dolore",
       "non",
       "anim",
-      "reprehenderit"
+      "reprehenderit",
+      "antonia"
     ],
     "friends": [
       {

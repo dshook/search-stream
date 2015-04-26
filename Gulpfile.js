@@ -21,7 +21,7 @@ gulp.task('clean', function() {
 
 
 gulp.task('lint-client', function() {
-  return gulp.src('./app/client/**/*.{js,jsx}')
+  return gulp.src('./app/client/**/*.{js}')
     .pipe(lint())
     .pipe(lint.format());
 });
@@ -53,11 +53,11 @@ gulp.task('browserify-client', function() {
  */
 
 gulp.task('client', function() {
-  return sequence(
+  return sequence([
     'lint-client',
     'clean',
     'browserify-client'
-  );
+  ]);
 });
 
 gulp.task('watch', function() {

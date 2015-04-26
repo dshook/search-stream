@@ -91,3 +91,18 @@ test('Regular Expression', function(t){
     t.equal(arr.length, 3, 'Regex found 3 matches');
   });
 });
+
+test('Search Columns', function(t){
+  t.plan(2);
+
+  var search = searchStream({searchKeys: ['eyeColor']});
+  var brownEyes = search('brown', messages);
+
+  t.equal(brownEyes.length, 3, 'Expected 3 Brown Eyes');
+
+  var nameSearch = searchStream({searchKeys: ['name']});
+  var antonias = nameSearch('Antonia', messages);
+
+  t.equal(antonias.length, 2, 'Expected 2 Named Antonia');
+
+});
