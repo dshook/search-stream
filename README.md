@@ -5,6 +5,7 @@ This project aims to create an easy and fast way to search an array or stream of
 ##Spec
 
 `var searchStream = require('search-stream');`
+
 Returns a function to create an instance of search stream.
 
 <pre>
@@ -16,9 +17,13 @@ Returns a function to create an instance of search stream.
 </pre>  
 Creates a search function with specified options. Case sensitivity is off by default.  Search keys allows you to specify which keys of the object should be searched including nested keys.  Default is none which allows all keys to be searched.
 
+
 Perform the search by any of these methods
+
 `var result = search(filter, objectArray);`
+
 Or
+
 `var resultStream = readableStream().pipe(search(filter));`
 
 Filter is either a string to search for or a regular expression.
