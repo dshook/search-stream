@@ -20,14 +20,14 @@ gulp.task('clean', function() {
 });
 
 
-gulp.task('lint-client', function() {
+gulp.task('lint', function() {
   return gulp.src('./app/client/**/*.{js}')
     .pipe(lint())
     .pipe(lint.format());
 });
 
 // client code
-gulp.task('browserify-client', function() {
+gulp.task('browserify', function() {
   var bundleStream = browserify({
     entries: ['./test/index.js'],
     debug: true
@@ -53,17 +53,16 @@ gulp.task('browserify-client', function() {
  */
 
 gulp.task('client', function() {
-  return sequence([
-    'lint-client',
+  return sequence(
+    'lint',
     'clean',
-    'browserify-client'
-  ]);
+    'browserify'
+  );
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['client'], function() {
   livereload.listen();
-  sequence('client');
-  gulp.watch('./**/*.js', ['lint-client', 'browserify-client']);
+  gulp.watch('./**/*.js', ['lint', 'browserify']);
 });
 
 gulp.task('default', ['client']);

@@ -6,15 +6,14 @@ var movies = require('./movie-data.js');
 var messages = require('./message-data.js');
 
 test('Basic Search', function (t) {
-    t.plan(3);
+  t.plan(3);
 
-    var movie = movies[0];
-    var search = searchStream();
+  var movie = movies[0];
+  var search = searchStream();
 
-    t.equal(search('Shawshank', movie), true, 'Found Shawshank');
-    t.equal(search('obbins', movie), true, 'Found partial Tim Robbins');
-    t.equal(search('bobo', movie), false, 'Did not find something not there');
-
+  t.equal(search('Shawshank', movie), true, 'Found Shawshank');
+  t.equal(search('obbins', movie), true, 'Found partial Tim Robbins');
+  t.equal(search('bobo', movie), false, 'Did not find something not there');
 });
 
 test('Array Search', function(t){
@@ -97,12 +96,10 @@ test('Search Columns', function(t){
 
   var search = searchStream({searchKeys: ['eyeColor']});
   var brownEyes = search('brown', messages);
-
   t.equal(brownEyes.length, 3, 'Expected 3 Brown Eyes');
 
   var nameSearch = searchStream({searchKeys: ['name']});
   var antonias = nameSearch('Antonia', messages);
-
   t.equal(antonias.length, 2, 'Expected 2 Named Antonia');
 
   var nameAndTagSearch = searchStream({searchKeys: ['name', 'tags']});

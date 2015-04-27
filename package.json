@@ -4,7 +4,7 @@
   "description": "User Centric Object Stream Searching",
   "main": "index.js",
   "scripts": {
-    "test": "grunt test"
+    "test": "node ./test/index.js"
   },
   "repository": {
     "type": "git",
