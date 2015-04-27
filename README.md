@@ -1,8 +1,8 @@
-#Search Stream
+# Search Stream
 
 This project aims to create an easy and fast way to search an array or stream of objects given some text to search for or a regular expression.
 
-##Spec
+## Spec
 
 `var searchStream = require('search-stream');`
 
@@ -18,17 +18,17 @@ Returns a function to create an instance of search stream.
 Creates a search function with specified options. Case sensitivity is off by default.  Search keys allows you to specify which keys of the object should be searched including nested keys.  Default is none which allows all keys to be searched.
 
 
-Perform the search by any of these methods
+Perform the search on an array of objects:
 
 `var result = search(filter, objectArray);`
 
-Or
+Or on an object stream:
 
 `var resultStream = readableStream().pipe(search(filter));`
 
-Filter is either a string to search for or a regular expression.
+The `filter` parameter is either a string to search for or a regular expression.
 
-##Examples
+## Examples
 Given an array of objects like this:
 <pre>
   var objs = [{
@@ -55,7 +55,7 @@ Given an array of objects like this:
   }]
 </pre>
 
-Here's how you search them:
+Here's how you search them and get back an array of objects with just the ones that match:
 
 <pre>
   var searchStream = require('search-stream');
