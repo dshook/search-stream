@@ -2,6 +2,8 @@
 
 This project aims to create an easy and fast way to search an array or stream of objects given some text to search for or a regular expression.
 
+`npm install search-stream`
+
 ## Spec
 
 `var searchStream = require('search-stream');`

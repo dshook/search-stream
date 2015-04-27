@@ -65,7 +65,7 @@ test('Stream nested object', function(t){
   t.plan(2);
 
   var search = searchStream({caseSensitive: true});
-  var dataStream = arrayToStream(messages);
+  var dataStream = arrayToStream(messages); 
 
   var destStream = dataStream.pipe(search('Buck'));
 

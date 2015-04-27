@@ -21,7 +21,7 @@ gulp.task('clean', function() {
 
 
 gulp.task('lint', function() {
-  return gulp.src('./app/client/**/*.{js}')
+  return gulp.src('./lib/**/*.js')
     .pipe(lint())
     .pipe(lint.format());
 });
